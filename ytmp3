@@ -1,7 +1,7 @@
 #!/bin/bash
 
 YOUTUBE_LINK=$1
-DESTINATION=$2
+DESTINATION=$2 # note:  $DESTINATION has to be an absolute path
 
 #### SETUP ####
 tmp_dir=$(mktemp -d)
