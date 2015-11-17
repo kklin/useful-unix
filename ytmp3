@@ -18,7 +18,7 @@ done
 
 for file in ___ ; do # fill in with an expression that represents a list of files for which to modify the metadata
   echo ">>>>>>>>>>>>>>>>>>>>"
-  echo "Modifying metadata for $f"
+  echo "Modifying metadata for $file"
 
   echo -n "Title: "
   read title # saves the user input into the title variable
