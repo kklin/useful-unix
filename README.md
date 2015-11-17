@@ -5,7 +5,9 @@ Try not violate any copyright laws ;)
 
 ### Your VM
 - Starting the VM:
-  - *virtualbox ___*
+  - Open VirtualBox
+  - File -> Import Appliance
+  - 
 - Enabling copy-paste:
   - Settings -> Advanced -> Shared Clipboard
     - Set to *Bidrectional*
