@@ -20,7 +20,8 @@ Here are some commands and concepts that you'll find useful later:
   - e.g. *man youtube-dl* 
 - *cd*: changes your current working directory. Basically, this changes where you are in your computer.
 - *ls*: list files in current working directory
-  - You can also *ls* files that match a certain pattern. e.g. *ls *.avi* will list all files in the current directory that end in *.avi*.  
+  - You can also *ls* files that match a certain pattern. e.g. *ls *.avi* will list all files in the current directory that end in *.avi*.
+- *mv $FILE $DEST*: moves a file (or multiple files) to a different place
 - *piping* is a method of connecting multiple commands together. The output of one command becomes the input to another. *|* is the pipe character. For example:
   - *fortune* generates a random fortune (try it!)
   - *cowsay $TEXT* takes some text and makes it look like a cow.. is saying it
