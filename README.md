@@ -38,6 +38,7 @@ This takes each word in *$INPUT*, puts in the variable *$item*, and then execute
   - An example is: *for name in kklin nlsun atran victorchen shwang ianlee ; do echo $name lurvs unix ; done*
   - If we want to loop over filenames in our current directory, we can replace $INPUT with a *regex*. For example, *for item in ** loops over all files, and *for item in *.mp3* loops over all mp3 files.
 - *sudo* lets you run commands as *root*. *Root* can do anything, unlike normal users which are constrained by permissions. If you're interested in the details of permissions, you can ask the Unix team sometime :)
+- Quotes are important. If you don't quote multi-word arguments, commands will think that you're providing multiple arguments when you're really only providing one.
 
 ### Setting up ffmpeg
 - sudo apt-get install ffmpeg
