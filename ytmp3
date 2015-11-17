@@ -1,0 +1,19 @@
+#!/bin/bash
+
+YOUTUBE_LINK=$1
+DESTINATION=$2
+
+# some setup
+tmp_dir=$(mktemp)
+cd $tmp_dir
+
+youtube-dl -t ___ # what are you downloading?
+for f in $(___) ; do # fill in with a command that generates a list of files you want to convert
+  ffmpeg -i ___ ___.mp3 # what file do you want to convert from and to?
+done
+
+mv ___ ___ # what files are you moving, and to where?
+
+# cleanup
+
+# serve up
