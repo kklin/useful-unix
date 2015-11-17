@@ -41,6 +41,7 @@ Here are some commands and concepts that you'll find useful later:
     - *cowsay join unix*
   - We could copy and paste the output of *fortune* to be the input to *cowsay* manually.. or we could pipe!
     - *fortune | cowsay* 
+  - Note that this isn't used in the *ytmp3* script
 
 ### Setting up ffmpeg
 - sudo apt-get install ffmpeg
