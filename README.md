@@ -28,12 +28,6 @@ Here are some commands and concepts that you'll find useful later:
 - *ls*: list files in current working directory
   - You can also *ls* files that match a certain pattern. e.g. *ls *.avi* will list all files in the current directory that end in *.avi*.
 - *mv $FILE $DEST*: moves a file (or multiple files) to a different place
-- *piping* is a method of connecting multiple commands together. The output of one command becomes the input to another. *|* is the pipe character. For example:
-  - *fortune* generates a random fortune (try it!)
-  - *cowsay $TEXT* takes some text and makes it look like a cow.. is saying it
-    - *cowsay join unix*
-  - We could copy and paste the output of *fortune* to be the input to *cowsay* manually.. or we could pipe!
-    - *fortune | cowsay* 
 - A *for loop* lets you do something *for* each item in an input. The general format is:
   - *for item in $INPUT ; do command $item ; done*
     - This takes each word in *$INPUT*, puts in the variable *$item*, and then executes the command *command $item*
@@ -41,6 +35,12 @@ Here are some commands and concepts that you'll find useful later:
   - If we want to loop over filenames in our current directory, we can replace $INPUT with a *regex*. For example, *for item in ** loops over all files, and *for item in *.mp3* loops over all mp3 files.
 - *sudo* lets you run commands as *root*. *Root* can do anything, unlike normal users which are constrained by permissions. If you're interested in the details of permissions, you can ask the Unix team sometime :)
 - Quotes are important. If you don't quote multi-word arguments, commands will think that you're providing multiple arguments when you're really only providing one.
+- *piping* is a method of connecting multiple commands together. The output of one command becomes the input to another. *|* is the pipe character. For example:
+  - *fortune* generates a random fortune (try it!)
+  - *cowsay $TEXT* takes some text and makes it look like a cow.. is saying it
+    - *cowsay join unix*
+  - We could copy and paste the output of *fortune* to be the input to *cowsay* manually.. or we could pipe!
+    - *fortune | cowsay* 
 
 ### Setting up ffmpeg
 - sudo apt-get install ffmpeg
