@@ -10,6 +10,10 @@ Try not violate any copyright laws ;)
 - Enabling copy-paste:
   - Settings -> Advanced -> Shared Clipboard
     - Set to *Bidrectional*
+- User credentials
+  - You shouldn't need it, but:
+    - Username: *useful-unix*
+    - Password: *jo1nun1x*
 
 ### Unix Basics
 Here are some commands and concepts that you'll find useful later:
