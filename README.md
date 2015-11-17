@@ -1,7 +1,8 @@
 # useful-unix
 
 For our workshop, we'll be building a simple script to convert YouTube videos to mp3 files. You'll learn about some basic command line skills in the process.
-Try not violate any copyright laws ;)
+
+Try not to violate any copyright laws ;)
 
 ### Your VM
 - Starting the VM:
