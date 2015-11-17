@@ -3,8 +3,12 @@
 For our workshop, we'll be building a simple script to convert YouTube videos to mp3 files. You'll learn about some basic command line skills in the process.
 Try not violate any copyright laws ;)
 
-### Starting your VM
-- *virtualbox ___*
+### Your VM
+- Starting the VM:
+  - *virtualbox ___*
+- Enabling copy-paste:
+  - Settings -> Advanced -> Shared Clipboard
+    - Set to *Bidrectional*
 
 ### Unix Basics
 Here are some commands and concepts that you'll find useful later:
@@ -31,22 +35,35 @@ Here are some commands and concepts that you'll find useful later:
 
 This takes each word in *$INPUT*, puts in the variable *$item*, and then executes the command *command $item*
   - An example is: *for name in kklin nlsun atran victorchen shwang ianlee ; do echo $name lurvs unix ; done*
+  - If we want to loop over filenames in our current directory, we can replace $INPUT with a *regex*. For example, *for item in ** loops over all files, and *for item in *.mp3* loops over all mp3 files.
 - *sudo* lets you run commands as *root*. *Root* can do anything, unlike normal users which are constrained by permissions. If you're interested in the details of permissions, you can ask the Unix team sometime :)
 
-### Setting up youtube-dl and ffmpeg
-- sudo apt-get install youtube-dl ffmpeg
-- Try it!
-  - *youtube-dl https://www.youtube.com/watch?v=719iIW8O37I*
+### Setting up ffmpeg
+- sudo apt-get install ffmpeg
 
+### Doing it by hand
+ - *youtube-dl https://www.youtube.com/watch?v=719iIW8O37I*
+ - *ffmpeg -i "[CS61C] - End of the Year Song (Fall 2014)-719iIW8O37I.mp4" "[CS61C] - End of the Year Song (Fall 2014)-719iIW8O37I.mp4.mp3"*
+ 
 ### Time for scripting!
-You're going to be modifying the template in ___
+You're going to be modifying the template in [ytmp3](ytmp3)
 
 What if we want fix the metadata for the mp3's?
  - loop through all the mp3 files
  - print out the filename
  - allow the user to set the song title and artist
  
+### Accessing Plex
+ - Settings -> Network -> Adapter 1 -> Port Forwarding
+ - Add a new rule where:
+    - *Host IP* is *127.0.0.1*
+    - *Host Port* is *32400*
+    - *Guest IP* is *10.0.2.15*
+    - *Guest Port* is *32400*
+ - Now you can go to *http://127.0.0.1:32400/web/index.html* from outside the VM
+    
 ### Adding it to your PATH
+  - Ask a sysadmin
 
 ### Extra features (what would you like to add?)
 - Background processes
