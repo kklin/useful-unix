@@ -53,7 +53,7 @@ Here are some commands and concepts that you'll find useful later:
 ### Time for scripting!
 You're going to be modifying the template in [ytmp3](ytmp3)
 
-What if we want fix the metadata for the mp3's?
+What if we want to fix the metadata for the mp3's?
  - loop through all the mp3 files
  - print out the filename
  - allow the user to set the song title and artist
