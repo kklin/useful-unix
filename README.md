@@ -35,12 +35,8 @@ Here are some commands and concepts that you'll find useful later:
   - We could copy and paste the output of *fortune* to be the input to *cowsay* manually.. or we could pipe!
     - *fortune | cowsay* 
 - A *for loop* lets you do something *for* each item in an input. The general format is:
-
-
-*for item in $INPUT ; do command $item ; done*
-
-
-This takes each word in *$INPUT*, puts in the variable *$item*, and then executes the command *command $item*
+  - *for item in $INPUT ; do command $item ; done*
+    - This takes each word in *$INPUT*, puts in the variable *$item*, and then executes the command *command $item*
   - An example is: *for name in kklin nlsun atran victorchen shwang ianlee ; do echo $name lurvs unix ; done*
   - If we want to loop over filenames in our current directory, we can replace $INPUT with a *regex*. For example, *for item in ** loops over all files, and *for item in *.mp3* loops over all mp3 files.
 - *sudo* lets you run commands as *root*. *Root* can do anything, unlike normal users which are constrained by permissions. If you're interested in the details of permissions, you can ask the Unix team sometime :)
