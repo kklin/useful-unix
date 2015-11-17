@@ -67,5 +67,6 @@ What if we want fix the metadata for the mp3's?
 
 ### Extra features (what would you like to add?)
 - Background processes
+- Only prompt for metadata if the appropriate option is set
 - Automatic metadata generation
 - Integrate it with automator on Mac
