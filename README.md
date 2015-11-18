@@ -8,6 +8,7 @@ Try not to violate any copyright laws ;)
 - Starting the VM:
   - Open VirtualBox
   - File -> Import Appliance
+  - Select `/tmp/workshop/useful-unix.ova`
 - Enabling copy-paste:
   - Settings -> Advanced -> Shared Clipboard
     - Set to *Bidrectional*
