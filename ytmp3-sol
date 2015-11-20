@@ -1,0 +1,43 @@
+#!/bin/bash
+
+YOUTUBE_LINK=$1
+DESTINATION=$2
+
+#### SETUP ####
+tmp_dir=$(mktemp -d)
+cd $tmp_dir
+
+#### MAIN LOGIC ####
+
+# insert youtube-dl invocation here to download the video(s)
+youtube-dl $YOUTUBE_LINK
+for file in *.mp4 ; do # fill in with an expression that represents a list of files you want to convert
+  # insert ffmpeg invocation here to convert the file
+  ffmpeg -i "$file" "$file.mp3"
+done
+
+for file in *.mp3 ; do # fill in with an expression that represents a list of files for which to modify the metadata
+  echo ">>>>>>>>>>>>>>>>>>>>"
+  echo "Modifying metadata for $file"
+
+  echo -n "Title: "
+  read title # saves the user input into the title variable
+
+  echo -n "Artist: "
+  read artist # saves the user input into the artist variable
+
+  # insert id3tool invocation here to update the metadata
+  # you can run "man id3tool" to learn more about the command
+  id3tool -t "$title" -r "$artist" "$file"
+done
+  
+
+mv *.mp3 "$DESTINATION" # what files are you moving, and to where?
+
+#### CLEANUP ####
+
+# delete tmp folder
+rm -rf $tmp_dir
+
+# refresh plex index
+LD_LIBRARY_PATH=/usr/lib/plexmediaserver /usr/lib/plexmediaserver/Plex\ Media\ Scanner --scan
